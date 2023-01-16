@@ -1,0 +1,699 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--	T2H SU2oOBJMTL_MITSUBA converted from Collada -->
+
+<scene version="0.5.0">
+	
+	<integrator type="multichannel">
+		<integrator type="field">
+			<string name="field" value="shapeIndex"/>
+		</integrator>
+		<integrator type="field">
+			<string name="field" value="distance"/>
+		</integrator>	
+	</integrator>
+
+	<sensor type="perspective">
+		<float name="focusDistance" value="14.1967"/>
+		<float name="fov" value="60"/>
+		<string name="fovAxis" value="x"/>
+		<transform name="toWorld">
+
+			<lookat target="10.2238, 7.00117, -6.33372" origin="10.6697, 7.39829, -5.53157" up="0, 1, 0"/>
+		</transform>
+
+		<sampler type="independent">
+			<integer name="sampleCount" value="256"/>
+		</sampler>
+
+		<film type="hdrfilm">
+					<boolean name="banner" value="false"/>
+					<integer name="width" value="448"/>
+					<integer name="height" value="448"/>
+					<string name="fileFormat" value="openexr"/>
+					<string name="pixelFormat" value="luminance,luminance"/>
+					<string name="channelNames" value="shape,distance"/>
+		</film>
+	</sensor>
+
+	<bsdf type="plastic" id="MATERIAL_WindowGlass">
+		<spectrum name="diffuseReflectance" filename="color/BBB7004.csv"/>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_window">
+		<bsdf type="diffuse">
+			<spectrum name="reflectance" filename="color/CYR3004.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_Wall">
+		<bsdf type="diffuse">
+			<spectrum name="reflectance" filename="color/NEUT475.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_ground">
+		<bsdf type="diffuse">
+			<spectrum name="reflectance" filename="color/NEUT750.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<!-- diffuse object materials -->
+	<bsdf type="twosided" id="MATERIAL1diffuse">
+		<bsdf type="diffuse">
+			<spectrum name="reflectance" filename="$fileColor1"/>
+		</bsdf>
+	</bsdf>
+	
+	<bsdf type="twosided" id="MATERIAL2diffuse">
+		<bsdf type="diffuse">
+			<spectrum name="reflectance" filename="$fileColor2"/>
+		</bsdf>	
+	</bsdf>
+	
+	<bsdf type="twosided" id="MATERIAL3diffuse">
+		<bsdf type="diffuse">
+			<spectrum name="reflectance" filename="$fileColor3"/>
+		</bsdf>
+	</bsdf>
+	
+	<bsdf type="twosided" id="MATERIAL_Statuediffuse">
+		<bsdf type="diffuse">
+			<spectrum name="reflectance" filename="$fileColor4"/>
+		</bsdf>
+	</bsdf>
+	
+	<bsdf type="twosided" id="MATERIAL_table2diffuse">
+		<bsdf type="diffuse">
+			<spectrum name="reflectance" filename="$fileColor5"/>
+		</bsdf>
+	</bsdf>
+
+	<!-- Plastic object materials -->		
+	<bsdf type="twosided" id="MATERIAL1plastic">
+		<bsdf type="Plastic">
+			<spectrum name="diffuseReflectance" filename="$fileColor1"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL2plastic">
+		<bsdf type="Plastic">
+			<spectrum name="diffuseReflectance" filename="$fileColor2"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL3plastic">
+		<bsdf type="Plastic">
+			<spectrum name="diffuseReflectance" filename="$fileColor3"/>
+		</bsdf>
+	</bsdf>
+		
+	<bsdf type="twosided" id="MATERIAL_Statueplastic">
+		<bsdf type="Plastic">
+			<spectrum name="diffuseReflectance" filename="$fileColor4"/>
+		</bsdf>		
+	</bsdf>
+		
+	<bsdf type="twosided" id="MATERIAL_table2plastic">
+		<bsdf type="Plastic">
+			<spectrum name="diffuseReflectance" filename="$fileColor5"/>
+		</bsdf>
+	</bsdf>
+	
+	<!-- Metal object materials -->	
+	<bsdf type="twosided" id="MATERIAL1metal">
+		<bsdf type="roughconductor">
+			<spectrum name="specularReflectance" filename="$fileColor1"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+	
+	<bsdf type="twosided" id="MATERIAL2metal">
+		<bsdf type="roughconductor">
+			<spectrum name="specularReflectance" filename="$fileColor2"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+	
+	<bsdf type="twosided" id="MATERIAL3metal">
+		<bsdf type="roughconductor">
+			<spectrum name="specularReflectance" filename="$fileColor3"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+	
+	<bsdf type="twosided" id="MATERIAL_Statuemetal">
+		<bsdf type="roughconductor">
+			<spectrum name="specularReflectance" filename="$fileColor4"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>	
+	
+	<bsdf type="twosided" id="MATERIAL_table2metal">
+		<bsdf type="roughconductor">
+			<spectrum name="specularReflectance" filename="$fileColor5"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>	
+
+	<bsdf type="diffuse" id="MATERIAL_glass1diffuse">
+		<spectrum name="reflectance" filename="color/BYR7012.csv"/>
+	</bsdf>
+
+	<bsdf type="diffuse" id="MATERIAL_glass2diffuse">
+		<spectrum name="reflectance" filename="color/CYR3004.csv"/>
+	</bsdf>
+
+	<bsdf type="diffuse" id="MATERIAL_glass3diffuse">
+		<spectrum name="reflectance" filename="color/AGG6008.csv"/>
+	</bsdf>
+
+	<bsdf type="diffuse" id="MATERIAL_glass4diffuse">
+		<spectrum name="reflectance" filename="color/DYY8010.csv"/>
+	</bsdf>
+
+	<bsdf type="diffuse" id="MATERIAL_glass5diffuse">
+		<spectrum name="reflectance" filename="color/DBB6008.csv"/>
+	</bsdf>
+
+	<bsdf type="diffuse" id="MATERIAL_glass6diffuse">
+		<spectrum name="reflectance" filename="color/BRR5012.csv"/>
+	</bsdf>
+
+	<bsdf type="diffuse" id="MATERIAL_glass7diffuse">
+		<spectrum name="reflectance" filename="color/BRP7008.csv"/>
+	</bsdf>
+
+	<bsdf type="diffuse" id="MATERIAL_glass8diffuse">
+		<spectrum name="reflectance" filename="color/BPP5008.csv"/>
+	</bsdf>
+
+	<bsdf type="diffuse" id="MATERIAL_glass9diffuse">
+		<spectrum name="reflectance" filename="color/NEUT925.csv"/>
+	</bsdf>
+
+	<bsdf type="diffuse" id="MATERIAL_glass10diffuse">
+		<spectrum name="reflectance" filename="color/NEUT450.csv"/>
+	</bsdf>
+
+	<bsdf type="diffuse" id="MATERIAL_glass11diffuse">
+		<spectrum name="reflectance" filename="color/NEUT050.csv"/>
+	</bsdf>
+
+	<bsdf type="plastic" id="MATERIAL_glass1plastic">
+		<spectrum name="diffuseReflectance" filename="color/BYR7012.csv"/>
+	</bsdf>
+
+	<bsdf type="plastic" id="MATERIAL_glass2plastic">
+		<spectrum name="diffuseReflectance" filename="color/CYR3004.csv"/>
+	</bsdf>
+
+	<bsdf type="plastic" id="MATERIAL_glass3plastic">
+		<spectrum name="diffuseReflectance" filename="color/AGG6008.csv"/>
+	</bsdf>
+
+	<bsdf type="plastic" id="MATERIAL_glass4plastic">
+		<spectrum name="diffuseReflectance" filename="color/DYY8010.csv"/>
+	</bsdf>
+
+	<bsdf type="plastic" id="MATERIAL_glass5plastic">
+		<spectrum name="diffuseReflectance" filename="color/DBB6008.csv"/>
+	</bsdf>
+
+	<bsdf type="plastic" id="MATERIAL_glass6plastic">
+		<spectrum name="diffuseReflectance" filename="color/BRR5012.csv"/>
+	</bsdf>
+
+	<bsdf type="plastic" id="MATERIAL_glass7plastic">
+		<spectrum name="diffuseReflectance" filename="color/BRP7008.csv"/>
+	</bsdf>
+
+	<bsdf type="plastic" id="MATERIAL_glass8plastic">
+		<spectrum name="diffuseReflectance" filename="color/BPP5008.csv"/>
+	</bsdf>
+
+	<bsdf type="plastic" id="MATERIAL_glass9plastic">
+		<spectrum name="diffuseReflectance" filename="color/NEUT950.csv"/>
+	</bsdf>
+
+	<bsdf type="plastic" id="MATERIAL_glass10plastic">
+		<spectrum name="diffuseReflectance" filename="color/NEUT450.csv"/>
+	</bsdf>
+
+	<bsdf type="plastic" id="MATERIAL_glass11plastic">
+		<spectrum name="diffuseReflectance" filename="color/NEUT050.csv"/>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_glass1metal">
+		<bsdf type="conductor">
+			<spectrum name="specularReflectance" filename="color/BYR7012.csv"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_glass2metal">
+		<bsdf type="conductor">
+			<spectrum name="specularReflectance" filename="color/CYR3004.csv"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_glass3metal">
+		<bsdf type="conductor">
+			<spectrum name="specularReflectance" filename="color/AGG6008.csv"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_glass4metal">
+		<bsdf type="conductor">
+			<spectrum name="specularReflectance" filename="color/DYY8010.csv"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_glass5metal">
+		<bsdf type="conductor">
+			<spectrum name="specularReflectance" filename="color/DBB6008.csv"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_glass6metal">
+		<bsdf type="conductor">
+			<spectrum name="specularReflectance" filename="color/BRR5012.csv"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_glass7metal">
+		<bsdf type="conductor">
+			<spectrum name="specularReflectance" filename="color/BRP7008.csv"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_glass8metal">
+		<bsdf type="conductor">
+			<spectrum name="specularReflectance" filename="color/BPP5008.csv"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_glass9metal">
+		<bsdf type="conductor">
+			<spectrum name="specularReflectance" filename="color/NEUT950.csv"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_glass10metal">
+		<bsdf type="conductor">
+			<spectrum name="specularReflectance" filename="color/NEUT450.csv"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="twosided" id="MATERIAL_glass11metal">
+		<bsdf type="conductor">
+			<spectrum name="specularReflectance" filename="color/NEUT050.csv"/>
+			<string name="distribution" value="ggx"/>
+			<float name="alpha" value="0.304"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="mixturebsdf" id="MATERIAL_glass1glass">
+		<string name="weights" value="0.5, 0.5"/>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/BYR7012.csv"/>
+			<spectrum name="specularTransmittance" filename="color/BYR7012.csv"/>
+		</bsdf>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/BYR7012.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="mixturebsdf" id="MATERIAL_glass2glass">
+		<string name="weights" value="0.5, 0.5"/>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/CYR3004.csv"/>
+			<spectrum name="specularTransmittance" filename="color/CYR3004.csv"/>
+		</bsdf>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/CYR3004.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="mixturebsdf" id="MATERIAL_glass3glass">
+		<string name="weights" value="0.5, 0.5"/>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/AGG6008.csv"/>
+			<spectrum name="specularTransmittance" filename="color/AGG6008.csv"/>
+		</bsdf>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/AGG6008.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="mixturebsdf" id="MATERIAL_glass4glass">
+		<string name="weights" value="0.5, 0.5"/>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/DYY8010.csv"/>
+			<spectrum name="specularTransmittance" filename="color/DYY8010.csv"/>
+		</bsdf>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/DYY8010.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="mixturebsdf" id="MATERIAL_glass5glass">
+		<string name="weights" value="0.5, 0.5"/>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/DBB6008.csv"/>
+			<spectrum name="specularTransmittance" filename="color/DBB6008.csv"/>
+		</bsdf>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/DBB6008.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="mixturebsdf" id="MATERIAL_glass6glass">
+		<string name="weights" value="0.5, 0.5"/>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/BRR5012.csv"/>
+			<spectrum name="specularTransmittance" filename="color/BRR5012.csv"/>
+		</bsdf>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/BRR5012.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="mixturebsdf" id="MATERIAL_glass7glass">
+		<string name="weights" value="0.5, 0.5"/>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/BRP7008.csv"/>
+			<spectrum name="specularTransmittance" filename="color/BRP7008.csv"/>
+		</bsdf>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/BRP7008.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="mixturebsdf" id="MATERIAL_glass8glass">
+		<string name="weights" value="0.5, 0.5"/>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/BPP5008.csv"/>
+			<spectrum name="specularTransmittance" filename="color/BPP5008.csv"/>
+		</bsdf>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/BPP5008.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="mixturebsdf" id="MATERIAL_glass9glass">
+		<string name="weights" value="0.5, 0.5"/>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/NEUT950.csv"/>
+			<spectrum name="specularTransmittance" filename="color/NEUT950.csv"/>
+		</bsdf>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/NEUT950.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="mixturebsdf" id="MATERIAL_glass10glass">
+		<string name="weights" value="0.5, 0.5"/>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/NEUT450.csv"/>
+			<spectrum name="specularTransmittance" filename="color/NEUT450.csv"/>
+		</bsdf>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/NEUT450.csv"/>
+		</bsdf>
+	</bsdf>
+
+	<bsdf type="mixturebsdf" id="MATERIAL_glass11glass">
+		<string name="weights" value="0.5, 0.5"/>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/NEUT050.csv"/>
+			<spectrum name="specularTransmittance" filename="color/NEUT050.csv"/>
+		</bsdf>
+
+		<bsdf type="dielectric">
+			<spectrum name="specularReflectance" filename="color/NEUT050.csv"/>
+		</bsdf>
+	</bsdf>
+	
+	<!--Lamp-->
+	<shape type="obj" id="object1">
+		<string name="filename" value="$object1"/>
+		<ref id="MATERIAL1$material1"/>
+		<transform name="toWorld">
+			<rotate x="1" angle="-90"/>
+			<rotate y="1" angle="210"/>
+			<scale x="4" y="4" z="4"/>
+			<translate x="10" y="2.14" z="-25"/>
+		</transform>
+	</shape>
+	
+	<!--Table-->
+	<shape type="obj" id="object2">
+		<string name="filename" value="$object2"/>
+		<ref  id="MATERIAL2$material2"/>
+		<transform name="toWorld">
+			<rotate x="1" angle="-90"/>
+			<rotate y="1" angle="210"/>
+			<scale x="3" y="3" z="3"/>
+			<translate x="8.5" y="1.6" z="-15"/>
+		</transform>
+	</shape>	
+	
+	<!--Ball-->
+	<shape type="obj" id="object3">
+		<string name="filename" value="$object3"/>
+		<ref id="MATERIAL3$material3"/>
+		<transform name="toWorld">
+			<rotate x="1" angle="-90"/>
+			<rotate y="1" angle="210"/>
+			<scale x="3" y="3" z="3"/>
+			<translate x="6" y="1.6" z="-11"/>
+		</transform>
+	</shape>
+		
+	<!--Statue-->
+	<shape type="serialized" id="object4">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="6"/>
+		<ref id="MATERIAL_Statue$material4"/>
+		<transform name="toWorld">
+			<matrix value="0.018197133808032822 -0.022232553035604508 3.814923149356584e-30 1.9829326206857036 -8.511885664933525e-18 -6.966897690756511e-18 0.028730159994480017 0.1415554508620929 -0.022232553035604573 -0.018197133808032905 -1.0999539126992713e-17 -21.45301020607977 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--table2-->
+	<shape type="serialized" id="object5">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="4"/>
+		<ref id="MATERIAL_table2$material5"/>
+		<transform name="toWorld">
+			<matrix value="0.0254 0.0 0.0 0.0 0.0 -9.724564495274451e-18 0.0254 0.0 0.0 -0.0254 -9.724564495274451e-18 0.0 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--glass1-->
+	<shape type="serialized" id="MAINglass1su2objmtl17">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="MATERIAL_glass1$glassMat"/>
+		<transform name="toWorld">
+			<matrix value="-0.049509370297799844 0.08575274480653107 0.0 1.7931117436658794 3.283102746133554e-17 1.895500254257401e-17 0.09901874059560012 2.2826908757827318 0.08575274480653107 0.049509370297799844 -3.791000508514819e-17 -10.646313928917397 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--glass2-->
+	<shape type="serialized" id="MAINglass2su2objmtl11">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="MATERIAL_glass2$glassMat"/>
+		<transform name="toWorld">
+			<matrix value="-0.049509370297799844 0.08575274480653107 0.0 1.7931117436658623 3.283102746133554e-17 1.895500254257401e-17 0.09901874059560012 2.2826908757827313 0.08575274480653107 0.049509370297799844 -3.791000508514819e-17 -11.075135246457382 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--glass3-->
+	<shape type="serialized" id="MAINglass3su2objmtl12">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="MATERIAL_glass3$glassMat"/>
+		<transform name="toWorld">
+			<matrix value="-0.049509370297799844 0.08575274480653107 0.0 1.79311174366586 3.283102746133554e-17 1.895500254257401e-17 0.09901874059560012 2.2826908757827313 0.08575274480653107 0.049509370297799844 -3.791000508514819e-17 -11.503956563997384 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--glass4-->
+	<shape type="serialized" id="MAINglass4su2objmtl15">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="MATERIAL_glass4$glassMat"/>
+		<transform name="toWorld">
+			<matrix value="-0.049509370297799844 0.08575274480653107 0.0 1.7931117436658508 3.283102746133554e-17 1.895500254257401e-17 0.09901874059560012 2.2826908757827313 0.08575274480653107 0.049509370297799844 -3.791000508514819e-17 -11.932777881537342 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--glass5-->
+	<shape type="serialized" id="MAINglass5su2objmtl16">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="MATERIAL_glass5$glassMat"/>
+		<transform name="toWorld">
+			<matrix value="-0.049509370297799844 0.08575274480653107 0.0 1.7931117436658692 3.283102746133554e-17 1.895500254257401e-17 0.09901874059560012 2.282690875782731 0.08575274480653107 0.049509370297799844 -3.791000508514819e-17 -12.361599199077366 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--glass6-->
+	<shape type="serialized" id="MAINglasee6su2objmtl19">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="MATERIAL_glass6$glassMat"/>
+		<transform name="toWorld">
+			<matrix value="-0.049509370297799844 0.08575274480653107 0.0 1.7931117436658643 3.283102746133554e-17 1.895500254257401e-17 0.09901874059560012 2.282690875782731 0.08575274480653107 0.049509370297799844 -3.791000508514819e-17 -12.751436760477404 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--glass7-->
+	<shape type="serialized" id="MAINglass7su2objmtl13">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="MATERIAL_glass7$glassMat"/>
+		<transform name="toWorld">
+			<matrix value="-0.049509370297799844 0.08575274480653107 0.0 1.7931117436658643 3.283102746133554e-17 1.895500254257401e-17 0.09901874059560012 2.282690875782731 0.08575274480653107 0.049509370297799844 -3.791000508514819e-17 -13.141274321877406 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--glass8-->
+	<shape type="serialized" id="MAINglass8su2objmtl14">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="MATERIAL_glass8$glassMat"/>
+		<transform name="toWorld">
+			<matrix value="-0.049509370297799844 0.08575274480653107 0.0 1.7931117436658714 3.283102746133554e-17 1.895500254257401e-17 0.09901874059560012 2.2826908757827304 0.08575274480653107 0.049509370297799844 -3.791000508514819e-17 -13.57009563941738 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--glass9-->
+	<shape type="serialized" id="MAINglass9su2objmtl9">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="MATERIAL_glass9$glassMat"/>
+		<transform name="toWorld">
+			<matrix value="-0.049509370297799844 0.08575274480653107 0.0 1.7931117436658714 3.283102746133554e-17 1.895500254257401e-17 0.09901874059560012 2.2826908757827304 0.08575274480653107 0.049509370297799844 -3.791000508514819e-17 -13.985895639417366 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--glass10-->
+	<shape type="serialized" id="MAINglass10su2objmtl10">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="MATERIAL_glass10$glassMat"/>
+		<transform name="toWorld">
+			<matrix value="-0.049509370297799844 0.08575274480653107 0.0 1.7931117436658743 3.283102746133554e-17 1.895500254257401e-17 0.09901874059560012 2.2826908757827304 0.08575274480653107 0.049509370297799844 -3.791000508514819e-17 -14.427738274497388 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--glass11-->
+	<shape type="serialized" id="MAINglass11su2objmtl18">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="9"/>
+		<ref name="bsdf" id="MATERIAL_glass11$glassMat"/>
+		<transform name="toWorld">
+			<matrix value="-0.049509370297799844 0.08575274480653107 0.0 1.79311174366586 3.283102746133554e-17 1.895500254257401e-17 0.09901874059560012 2.28269087578273 0.08575274480653107 0.049509370297799844 -3.791000508514819e-17 -14.81757583589739 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--ground-->
+	<shape type="serialized" id="MAINgroundsu2objmtl3">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="3"/>
+		<ref name="bsdf" id="MATERIAL_ground"/>
+		<transform name="toWorld">
+			<matrix value="0.0254 0.0 0.0 0.0 0.0 -9.724564495274451e-18 0.0254 0.0 0.0 -0.0254 -9.724564495274451e-18 0.0 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--Wall-->
+	<shape type="serialized" id="MAINWallsu2objmtl5">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="5"/>
+		<ref name="bsdf" id="MATERIAL_Wall"/>
+		<transform name="toWorld">
+			<matrix value="0.0254 0.0 0.0 0.0 0.0 -9.724564495274451e-18 0.0254 0.0 0.0 -0.0254 -9.724564495274451e-18 0.0 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--window-->
+	<shape type="serialized" id="MAINwindowsu2objmtl1">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="1"/>
+		<ref name="bsdf" id="MATERIAL_window"/>
+		<transform name="toWorld">
+			<matrix value="0.0254 0.0 0.0 0.0 0.0 -9.724564495274451e-18 0.0254 0.0 0.0 -0.0254 -9.724564495274451e-18 0.0 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+	
+	<!--WindowGlass-->
+	<shape type="serialized" id="MAINglasssu2objmtl2">
+		<string name="filename" value="mitsuba_main.serialized"/>
+		<integer name="shapeIndex" value="2"/>
+		<ref name="bsdf" id="MATERIAL_WindowGlass"/>
+		<transform name="toWorld">
+			<matrix value="0.0254 0.0 0.0 0.0 0.0 -9.724564495274451e-18 0.0254 0.0 0.0 -0.0254 -9.724564495274451e-18 0.0 0.0 0.0 0.0 1.0 "/>
+		</transform>
+	</shape>
+
+	<shape type="rectangle">
+		<transform name="toWorld">
+			<scale x="2" y="2" z="2"/>
+			<rotate x="1" angle="90"/>
+			<rotate z="1" angle="0"/>
+			<translate x="12" y="15.6" z="-6"/>
+		</transform>
+		<emitter type="area" id="illuminant2">
+			<spectrum name="radiance" filename="$fileillu"/>
+		</emitter>
+	</shape>
+</scene>
