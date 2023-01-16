@@ -11,10 +11,19 @@ Use file maintest.py in this folder to test the model.
 
 
 
-## materials & image gernerator
-The Mitsuba scene layout as well as the colors and illuminants spectra used along with some sample objects are located in the material folder
-To generate new images, Mitsuba must be installed from https://github.com/mitsuba-renderer/mitsuba
+## Materials & image gernerator
 
+### Colors
+
+For color we use  1600 Munsell colors glossy from: https://sites.uef.fi/spectral/munsell-colors-glossy-all-spectrofotometer-measured/
+
+### illuminations
+We used 17 different illumination spectra. You can find them in the material/illumination folder
+
+### Spectral renderer engine
+For generating datset we used Mitsuba spectral renderer engine
+The Mitsuba scene layout is located in the material folder
+To generate new images, Mitsuba must be installed from https://github.com/mitsuba-renderer/mitsuba
 
 After that you should run this command in the command prompt:
 ```
